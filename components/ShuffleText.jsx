@@ -43,7 +43,7 @@ function useShuffledText(text, setShuffledText) {
     async function fetchText() {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/shuffletext?text=${text}`
+          `${window.location.origin}/api/shuffletext?text=${text}`
         );
 
         if (!response.ok) {
